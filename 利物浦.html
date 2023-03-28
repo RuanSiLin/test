@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>利物浦球员表</title>
+    <link
+      rel="stylesheet"
+      href="../css/轮播图01.css"
+    />
+    <script src="jquerymin.js"></script>
+  <style>html,
+    body {
+      position: relative;
+      height: 100%;
+      
+    }
+
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    body{
+        background-image: linear-gradient(to right, #a8edea 0%,#fed6e3 100%);
+    }
+    #lwpname{
+  font:bold 50px/60px 宋体;
+  width:400px;
+  text-align: center;
+  color:rgba(139, 0, 0, 0.88);
+  left: 650px;
+  position: relative;
+  top: 100px;
+
+  }
+  #lwp{
+  text-align:center;
+  }
+     .lwp{
+        display: inline-block;
+        position: relative;
+        left: 17px;
+     }
+     .shou{
+        display: inline-block;
+        text-align: center;
+     }
+     #shou{
+        display: inline-block;
+        left: 50px;
+        width: 800px;
+        height: 500px;
+     }
+     
+     #vvdname:hover{
+        color: brown;
+
+     }
+     p{
+        text-align: center;
+        font-size: medium;
+        font-weight: bold;
+     }
+     p:hover{
+        color: brown;
+     }
+     #box{
+        text-decoration: none;
+        color: darkmagenta;
+     }
+     #phone{
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 250px;
+        height: auto;
+        background: rgb(162, 233, 181);
+        padding-right: 40px;
+        font-size: 30px;
+        color:rgb(239, 97, 9);
+        z-index: 999;
+     }
+     
+
+        .todo_list {
+            width: 800px;
+            height: 800px;
+            margin: 20px auto;
+            border-style: dotted solid double dashed;
+        }
+
+        .top {
+            height: 100px;
+            /* outline: red solid 1px; */
+        }
+
+        .title {
+            text-align: center;
+        }
+
+        .search {
+            text-align: center;
+        }
+
+        .search input {
+            margin: 10px;
+            width: 650px;
+            height: 30px;
+            padding-left: 5px;
+        }
+
+        .search button {
+            width: 60px;
+            height: 30px;
+            background-color: #428bca;
+            border-color: #357ebd;
+            color: #fff;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .head {
+            height: 50px;
+        }
+
+        .content {
+            height: 600px;
+            /* outline: yellow solid 1px; */
+        }
+
+        .list {
+            margin-top: 10px;
+            height: 30px;
+            display: flex;
+            text-align: center;
+        }
+
+        .left {
+            width: 50%;
+            text-indent: 40px;
+        }
+
+        .time {
+            width: 30%;
+        }
+
+        .operation {
+            width: 20%;
+            text-align: center;
+        }
+
+        .operation button {
+            padding: 5px;
+            margin-left: 5px;
+            background-color: #428bca;
+            border-color: #357ebd;
+            color: #fff;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .listtodo {
+            margin: 10px 0;
+            display: flex;
+        }
+
+        .line {
+            text-decoration: line-through;
+            color: red;
+        }
+
+  </style>
+</head>
+<body>
+
+<p>
+    <div id="box">
+        <a  class="a1" href="https://baike.so.com/doc/4564139-4775073.html">俱乐部介绍</a>
+        <a  class="a2" href="https://www.liverpoolfc.com/">球队官网</a>
+        <a  class="a3" href="#">球队商城</a>
+        <a  class="a4" href="https://www.liverpoolfc.com/news">球队新闻</a>
+        <a  class="a5" href="https://image.so.com/i?src=360pic_normal&z=1&i=0&cmg=15484592.1129391083368165800.1658943701045.4004&q=%E5%88%A9%E7%89%A9%E6%B5%A6">球队相关图片</a>
+        <div id="phone">
+            联系微信：xz2779391197
+        </div>
+    </div>
+    <div>
+        <div class="shou">
+            <p id="lwpname">
+                利物浦球员表
+            </p>
+        </div>
+        <div class="swiper mySwiper" id="shou">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="利物浦01.jpg" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="利物浦02.jpg" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="利物浦03.jpg" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="利物浦04.jpg" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="利物浦05.jpg" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="利物浦06.jpg" alt="">
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+          </div> 
+    </div>
+        
+        
+    
+</p>
+<audio autoplay="autoplay"
+       id="lwp"
+       loop="loop"
+       controls
+       preload="auto"
+       src="lwp.mp3"
+       >
+
+</audio>
+<hr>
+<div>
+<p>
+        <div class="lwp">
+            <a href="https://baike.so.com/doc/23824925-24381340.html">
+            <img src="范迪克.jpg" alt="维吉尔.范迪克" title="维吉尔.范迪克" width="400" height="280" id="vvd">
+            </a>
+            <p style="text-align: center;" id="vvdname">姓名：维吉尔.范迪克</p>
+            <p>年龄：31</p>
+            <p>国家：荷兰</p>
+            <p>司职：后卫</p>
+            <p>号码：4</p>
+        </div>
+        <div class="lwp">
+            <a href="https://baike.so.com/doc/6423403-6637075.html">
+            <img src="亨德森.jpg" alt="亨德森" title="乔丹.亨德森" width="400" height="280" id="sa">
+            </a>
+            <p style="text-align: center;" id="vvdname">姓名：乔丹.亨德森</p>
+            <p>年龄：32</p>
+            <p>国家：英格兰</p>
+            <p>司职：中场</p>
+            <p>号码：14</p>
+        </div>
+        <div class="lwp">
+            <a href="https://baike.so.com/doc/4838410-5055379.html?from=2943845&sid=5055379&redirect=search">
+            <img src="萨拉赫.jpg" alt="萨拉赫" title="穆罕默德.萨拉赫" width="400" height="280" id="hedo">
+            </a>
+            <p style="text-align: center;" id="vvdname">姓名：穆罕默德.萨拉赫</p>
+            <p>年龄：30</p>
+            <p>国家：埃及</p>
+            <p>司职：前锋</p>
+            <p>号码：11</p>
+        </div>
+        <div class="lwp">
+            <a href="https://www.zhihu.com/topic/20537113/hot">
+            <img src="阿诺德.jpg" alt="阿诺德" title="亚历山大.阿诺德" width="400" height="280" id="taa">
+            </a>
+            <p style="text-align: center;" id="vvdname">姓名：亚历山大.阿诺德</p>
+            <p>年龄：24</p>
+            <p>国家：英格兰</p>
+            <p>司职：后卫</p>
+            <p>号码：66</p>
+        </div>
+</p>
+<p>
+    <div class="lwp">
+        <a href="https://www.okooo.com/soccer/player/359338/">
+        <img src="努涅斯.jpg" alt="达尔文.努涅斯" title="达尔文.努涅斯" width="400" height="280" id="vvd">
+        </a>
+        <p style="text-align: center;" id="vvdname">姓名：达尔文.努涅斯</p>
+        <p>年龄：23</p>
+        <p>国家：乌拉圭</p>
+        <p>司职：前锋</p>
+        <p>号码：27</p>
+    </div>
+    <div class="lwp">
+        <a href="https://baike.so.com/doc/29273447-30773291.html">
+        <img src="埃利奥特.jpg" alt="埃利奥特" title="哈维.埃利奥特" width="400" height="280" id="sa">
+        </a>
+        <p style="text-align: center;" id="vvdname">姓名：哈维.埃利奥特</p>
+        <p>年龄：19</p>
+        <p>国家：英格兰</p>
+        <p>司职：中场</p>
+        <p>号码：19</p>
+    </div>
+    <div class="lwp">
+        <a href="https://baike.so.com/doc/29707717-31251969.html">
+        <img src="科纳特.jpg" alt="科纳特" title="易卜拉希马·科纳特" width="400" height="280" id="hedo">
+        </a>
+        <p style="text-align: center;" id="vvdname">姓名：易卜拉希马·科纳特</p>
+        <p>年龄：23</p>
+        <p>国家：法国</p>
+        <p>司职：后卫</p>
+        <p>号码：5</p>
+    </div>
+    <div class="lwp">
+        <a href="https://baike.so.com/doc/6705878-6919867.html">
+        <img src="马蒂普.jpg" alt="马蒂普" title="乔尔·马蒂普" width="400" height="280" id="taa">
+        </a>
+        <p style="text-align: center;" id="vvdname">姓名：乔尔·马蒂普</p>
+        <p>年龄：31</p>
+        <p>国家：喀麦隆</p>
+        <p>司职：后位</p>
+        <p>号码：32</p>
+    </div>
+</p>
+<p>
+    <div class="lwp">
+        <a href="https://baike.so.com/doc/9748659-10095212.html">
+        <img src="罗伯逊.jpg" alt="安德鲁.罗伯逊" title="安德鲁.罗伯逊" width="400" height="280" id="vvd">
+        </a>
+        <p style="text-align: center;" id="vvdname">姓名：安德鲁.罗伯逊</p>
+        <p>年龄：28</p>
+        <p>国家：苏格兰</p>
+        <p>司职：后卫</p>
+        <p>号码：26</p>
+    </div>
+    <div class="lwp">
+        <a href="https://baike.so.com/doc/29273447-30773291.html">
+        <img src="戈麦斯.jpg" alt="戈麦斯" title="乔.戈麦斯" width="400" height="280" id="sa">
+        </a>
+        <p style="text-align: center;" id="vvdname">姓名：乔.戈麦斯</p>
+        <p>年龄：25</p>
+        <p>国家：英格兰</p>
+        <p>司职：后卫</p>
+        <p>号码：2</p>
+    </div>
+    <div class="lwp">
+        <a href="https://baike.so.com/doc/24961885-25917634.html">
+        <img src="凯莱赫.jpg" alt="凯莱赫" title="克劳列曼.凯莱赫" width="400" height="280" id="hedo">
+        </a>
+        <p style="text-align: center;" id="vvdname">姓名：克劳列曼·凯莱赫</p>
+        <p>年龄：24</p>
+        <p>国家：爱尔兰</p>
+        <p>司职：门将</p>
+        <p>号码：62</p>
+    </div>
+    <div class="lwp">
+        <a href="https://baike.so.com/doc/25707821-26795523.html">
+        <img src="阿利松.jpg" alt="阿利松" title="阿利松.贝克尔" width="400" height="280" id="taa">
+        </a>
+        <p style="text-align: center;" id="vvdname">姓名：阿利松.贝克尔</p>
+        <p>年龄：30</p>
+        <p>国家：巴西</p>
+        <p>司职：门将</p>
+        <p>号码：1</p>
+    </div>
+</p>
+<p>
+    <div class="lwp">
+        <a href="https://baike.so.com/doc/25057260-26028428.html">
+        <img src="若塔.jpg" alt="迪奥戈.若塔" title="迪奥戈.若塔" width="400" height="280" id="vvd">
+        </a>
+        <p style="text-align: center;" id="vvdname">姓名：迪奥戈.若塔</p>
+        <p>年龄：26</p>
+        <p>国家：葡萄牙</p>
+        <p>司职：前锋</p>
+        <p>号码：20</p>
+    </div>
+    <div class="lwp">
+        <a href="https://news.so.com/ns?q=%e7%a7%91%e8%bf%aa%c2%b7%e5%8a%a0%e5%85%8b%e6%b3%a2&src=onebox">
+        <img src="加克波.jpg" alt="加克波" title="科迪.加克波" width="400" height="280" id="sa">
+        </a>
+        <p style="text-align: center;" id="vvdname">姓名：科迪.加克波</p>
+        <p>年龄：23</p>
+        <p>国家：荷兰</p>
+        <p>司职：前锋</p>
+        <p>号码：18</p>
+    </div>
+    <div class="lwp">
+        <a href="hhttps://tiyu.baidu.com/player?id=2873460883d409cd8067089123f6204d&tab=%E8%B5%84%E6%96%99">
+        <img src="迪亚斯.jpg" alt="迪亚斯" title="路易斯.迪亚斯" width="400" height="280" id="hedo">
+        </a>
+        <p style="text-align: center;" id="vvdname">姓名：路易斯.迪亚斯</p>
+        <p>年龄：25</p>
+        <p>国家：哥伦比亚</p>
+        <p>司职：前锋</p>
+        <p>号码：23</p>
+    </div>
+    <div class="lwp">
+        <a href="https://baike.so.com/doc/734710-777803.html">
+        <img src="菲尔米诺.jpg" alt="菲尔米诺" title="罗伯特.菲尔米诺" width="400" height="280" id="taa">
+        </a>
+        <p style="text-align: center;" id="vvdname">姓名：罗伯特.菲尔米诺</p>
+        <p>年龄：31</p>
+        <p>国家：巴西</p>
+        <p>司职：前锋</p>
+        <p>号码：9</p>
+    </div>
+</p>
+</div>
+<div class="todo_list">
+  <div class="top">
+      <div class="title">
+          <h2>比赛评论以及分析</h2>
+      </div>
+      <div class="search">
+          <input type="text" id="todo" onkeyup="this.value=this.value.replace(/[, ]/g,'')">
+          <button id="add">添加</button>
+      </div>
+  </div>
+  <div class="head">
+      <div class="list">
+          <div class="left">
+              <h3>need to be dealt with</h3>
+          </div>
+          <div class="time">
+              <h3>时间</h3>
+          </div>
+          <div class="operation">
+              <h3>operation</h3>
+          </div>
+      </div>
+  </div>
+  <div class="content">
+      <!-- <div class="listtodo">
+          <div class="left">
+              123
+          </div>
+          <div class="time">
+              2019.15.26
+          </div>
+          <div class="operation">
+              <button>done</button>
+              <button>delete</button>
+          </div>
+      </div> -->
+  </div>
+</div>
+&copy;版权所有-阮炫焯
+<script src="../js/js/基础/轮播图01.js"></script>
+<script src="jquery.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+      $(function(){
+        $('#box a').mouseover(function(){
+          $(this).show();
+        })
+      })
+      //id标识便于筛选
+      var count = 0;
+        // 第一次加载执行
+        window.onload = function () {
+            w_getData();
+        }
+        // localStorage 存储在本地，容量为5M或者更大，不会在请求时候携带传递，在所有同源窗口中共享，数据一直有效，除非人为删除，可作为长期数据。
+        //设置：
+        // localStorage.setItem("dat", "456");
+        //获取：
+        // localStorage.getItem("dat");
+        //删除
+        // localStorage.removeItem("dat");
+        //调取本地存储展示在页面 w_前缀是为了方便智能查找
+        function w_getData() {
+            var data = JSON.parse(localStorage.getItem('todoList'));
+            var arr = [];
+            //没有直接return掉
+            if (data == null) {
+                return
+            }
+            $('.content').html('');
+            for (var i = 0; i < data.length; i++) {
+                if (data[i].line == true) {
+                    var html = `<div class="listtodo line" listid="${data[i].id}"><div class="left">${data[i].things}</div><div class="time">${data[i].time}</div><div class="operation"><button id="done">done</button><button id="delete">delete</button></div></div>`;
+                    // $('.content').append(html);
+                } else {
+                    var html = `<div class="listtodo" listid="${data[i].id}"><div class="left">${data[i].things}</div><div class="time">${data[i].time}</div><div class="operation"><button id="done">done</button><button id="delete">delete</button></div></div>`;
+                }
+                // var html = `<div class="listtodo" listid="${data[i].id}"><div class="left">${data[i].things}</div><div class="time">${data[i].time}</div><div class="operation"><button id="done">done</button><button id="delete">delete</button></div></div>`;
+                $('.content').append(html);
+                if (data[i].id != null) {
+                    arr.push(data[i].id);
+                }
+            }
+            if (arr.length > 0) {
+                var max = Math.max.apply(null, arr);
+                count = max + 1;
+            }
+        }
+        $(function () {
+            //添加事件
+            $('#add').click(function () {
+                // 非空验证
+                if ($('#todo').val() == '') {
+                    return
+                }
+                //获取时间
+                var time = w_nowTime();
+                //todoList
+                var todoList = [];
+                // 先获取下本地是否存有
+                var historyTodoList = JSON.parse(localStorage.getItem("todoList"));
+                if (historyTodoList) {
+                    //本地有
+                    var todo = {};
+                    todo.things = $('#todo').val();
+                    todo.time = time;
+                    todo.id = count;
+                    historyTodoList.push(todo);
+                    localStorage.setItem('todoList', JSON.stringify(historyTodoList));
+                    count++;
+                } else {
+                    //本地無
+                    var todo = {};
+                    todo.things = $('#todo').val();
+                    todo.time = time;
+                    todo.id = count;
+                    todoList.push(todo);
+                    localStorage.setItem('todoList', JSON.stringify(todoList));
+                    count++;
+                }
+                //存储完成后清空输入框
+                $('#todo').val('');
+                // 显示在任务列表
+                w_getData();
+            })
+            // 已完成直接划掉(采用事件委托的方式，方式新增html元素找不到事件)
+            $(document).on('click', '#done', function () {
+                $(this).parent().parent().addClass('line')
+                let listids = $(this).parent().parent().attr('listid');
+                let datas = JSON.parse(localStorage.getItem('todoList'));
+                let resIndexs = datas.findIndex(v => {
+                    return v.id === parseInt(listids);
+                })
+                datas[resIndexs].line = true;
+                localStorage.setItem('todoList', JSON.stringify(datas));
+
+            })
+            //delete删除事件(采用事件委托的方式，方式新增html元素找不到事件)
+            $(document).on('click', '#delete', function () {
+                let listid = $(this).parent().parent().attr('listid');
+                let data = JSON.parse(localStorage.getItem('todoList'));
+                // ES6 提供了两个数组的实例查找相关的方法
+                // ① Array.find
+                // ② Array.findIndex
+                let res = data.find(v => {
+                    return v.id === parseInt(listid);
+                })
+                let resIndex = data.findIndex(v => {
+                    return v.id === parseInt(listid);
+                })
+                console.log(res, resIndex)
+                data.splice(resIndex, 1);
+                //删除后存储
+                localStorage.setItem('todoList', JSON.stringify(data));
+                w_getData();
+            })
+            //时间函数
+            function w_nowTime() {
+                var myDate = new Date();
+                var year = myDate.getFullYear();    //获取完整的年份(4位,1970-????)
+                var month = myDate.getMonth()+1;       //获取当前月份(0-11,0代表1月)
+                var day = myDate.getDate();        //获取当前日(1-31)
+                var week = myDate.getDay();         //获取当前星期X(0-6,0代表星期天)
+                var hour = myDate.getHours();       //获取当前小时数(0-23)
+                var minutes = myDate.getMinutes();     //获取当前分钟数(0-59)
+                var seconds = myDate.getSeconds();     //获取当前秒数(0-59)
+                switch (week) {
+                    case 0:
+                        week = `日`
+                        break;
+                    case 1:
+                        week = `一`
+                        break;
+                    case 2:
+                        week = `二`
+                        break;
+                    case 3:
+                        week = `三`
+                        break;
+                    case 4:
+                        week = `四`
+                        break;
+                    case 5:
+                        week = `五`
+                        break;
+                    case 6:
+                        week = `六`
+                        break;
+                    default:
+                }
+                return `${year}年${w_zero(month)}月${w_zero(day)}日${w_zero(hour)}:${w_zero(minutes)}:${w_zero(seconds)}星期${week}`
+            }
+            //不够补零
+            function w_zero(num) {
+                if (num < 10) return "0" + num; else return num;
+            }
+        })
+        // enter添加事件
+        $('#todo').keydown(function (event) {
+            var e = event || window.event;
+            if (e.keyCode == 13) {
+                $('#add').click();
+            }
+        });
+    </script>
+</body>
+</html>
